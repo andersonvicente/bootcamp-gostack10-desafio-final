@@ -3,15 +3,15 @@
 </h1>
 
 <h2 align="center">
-  FastFeet, desafio final GoStack 10 Rocketseat.
+  :truck:&nbsp;FastFeet, desafio final GoStack 10 Rocketseat.&nbsp;:truck:
 </h2>
 
 <p align="center">
-  <a href="#articulated_lorry-sobre-a-aplicação-fastfeet">:truck:&nbsp;Sobre a aplicação</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="#arrows_counterclockwise-back-end">:truck:&nbsp;Back-end</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="#computer-front-end">:truck:&nbsp;Front-end</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="#iphone-mobile">:truck:&nbsp;Mobile</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="#memo-licença">:truck:&nbsp;Licença</a>
+  <a href="#articulated_lorry-sobre-a-aplicação-fastfeet">Sobre a aplicação</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#arrows_counterclockwise-back-end">Back-end</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#computer-front-end">Front-end</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#iphone-mobile">Mobile</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#memo-licença">Licença</a>
 </p>
 
 ## :articulated_lorry: Sobre a aplicação FastFeet
