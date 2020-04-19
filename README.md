@@ -83,7 +83,8 @@ Instale os pacotes do projeto com NPM ou Yarn:
 user@server:~/mobile$ yarn install
 ```
 
-#### Atenção! Todos os testes abaixo foram realizados no Android via emulação USB. Não consegui testar no IOS porém é muito provável que funcione já que não existe refência de plataforma específica dentro do código fonte. 
+### Atenção! Todas as etapas a seguir foram realizadas no Android via emulação USB. Não consegui testar no IOS porém é muito provável que funcione já que não existe referência de plataforma específica dentro do código fonte. 
+#### Antes de prosseguir acesse a documentação da Rocketseat sobre configurações de ambientes para React Native <a href="https://react-native.rocketseat.dev/">Clicando Aqui</a>.
 
 Atualize as bibliotecas no celular:
 ```console
