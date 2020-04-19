@@ -26,7 +26,19 @@ user@server:~/home$ git clone https://github.com/andersonvicente/bootcamp-gostac
 
 ## :wrench: Ferramentas
 
-Instale o Docker :whale2: disponível em <a href="https://www.docker.com/">https://www.docker.com/</a> e inicie um container do Postgres :elephant:, outro do Mongodb :leaves: e outro para o redis (Alpine) :rotating_light:.
+Instale o Docker :whale2: disponível em <a href="https://www.docker.com/">https://www.docker.com/</a>.
+:elephant: Inicie um container do Postgres, exemplo:
+```console
+user@server:~/fastfeet$ docker run --name fastfeetdb -e POSTGRES_PASSWORD=docker -p 5432:5432 -d postgres
+```
+:leaves: Inicie um container do Mongodb, exemplo:
+```console
+user@server:~/fastfeet$ docker run --name mongodb -p 27017:27017 -d mongo
+```
+:rotating_light: Inicie um container do redis, exemplo:
+```console
+user@server:~/fastfeet$ docker run --name redisbarber -p 6379:6379 -d -t redis:alpine
+```
 
 Acesse o container do Postgres e crie um novo banco de dados, por exemplo, fastfeetdb.
 
@@ -36,32 +48,32 @@ Você pode criar uma conta em <a href="https://mailtrap.io/">https://mailtrap.io
 
 ## :gear: Back-end
 
-A partir do diretório root do projeto fastfeet entre na pasta pasta backend:
+1. A partir do diretório root do projeto fastfeet entre na pasta pasta backend:
 ```console
 user@server:~/fastfeet$ cd ./backend
 ```
 
-Instale os pacotes do projeto com NPM ou Yarn:
+2. Instale os pacotes do projeto com NPM ou Yarn:
 ```console
 user@server:~/backend$ yarn install
 ```
 
-Crie um novo arquivo .env baseado no .env.example existente na pasta e preencha as variáveis com as suas configurações dos containers do Docker, banco de dados e conta de e-mail:
+3. Crie um novo arquivo .env baseado no .env.example existente na pasta e preencha as variáveis com as suas configurações dos containers do Docker, banco de dados e conta de e-mail:
 ```console
 user@server:~/backend$ cp .env.example .env
 ```
 
-O comando a seguir irá criar todas as tabelas no banco de dados Postgres que você criou:
+4. O comando a seguir irá criar todas as tabelas no banco de dados Postgres que você criou:
 ```console
 user@server:~/backend$ npx sequelize-cli db:migrate
 ```
 
-Execute o seguinte comando para criar o primeiro usuário administrador do fastfeet (usuário é admin@fastfeet.com e a senha é 123456):
+5. Execute o seguinte comando para criar o primeiro usuário administrador do fastfeet (usuário é admin@fastfeet.com e a senha é 123456):
 ```console
 user@server:~/backend$ npx sequelize-cli db:seed:all
 ```
 
-Inicie a execução do projeto (por padrão iniciará utilizando a porta 4444):
+6. Inicie a execução do projeto (por padrão iniciará utilizando a porta 4444):
 ```console
 user@server:~/backend$ yarn dev
 Listening on port 4444
@@ -75,24 +87,24 @@ user@server:~/backend$ yarn start
 Listening on port 4444
 ```
 
-Abra outro console e execute o seguinte comando para ativar a fila de envio de e-mail:
+7. Abra outro console e execute o seguinte comando para ativar a fila de envio de e-mail:
 ```console
 user@server:~/backend$ yarn queue
 ```
 
 ## :computer: Front-end
 
-A partir do diretório root do projeto fastfeet entre na pasta pasta frontend:
+1. A partir do diretório root do projeto fastfeet entre na pasta pasta frontend:
 ```console
 user@server:~/fastfeet$ cd ./frontend
 ```
 
-Instale os pacotes do projeto com NPM ou Yarn:
+2. Instale os pacotes do projeto com NPM ou Yarn:
 ```console
 user@server:~/frontend$ yarn install
 ```
 
-Inicie a execução do projeto (por padrão iniciará utilizando a porta 3000):
+3. Inicie a execução do projeto (por padrão iniciará utilizando a porta 3000):
 ```console
 user@server:~/frontend$ yarn start
 Listening on port 3000
@@ -100,12 +112,12 @@ Listening on port 3000
 
 ## :iphone: Mobile
 
-A partir do diretório root do projeto fastfeet entre na pasta pasta mobile:
+1. A partir do diretório root do projeto fastfeet entre na pasta pasta mobile:
 ```console
 user@server:~/fastfeet$ cd ./mobile
 ```
 
-Instale os pacotes do projeto com NPM ou Yarn:
+2. Instale os pacotes do projeto com NPM ou Yarn:
 ```console
 user@server:~/mobile$ yarn install
 ```
@@ -113,17 +125,27 @@ user@server:~/mobile$ yarn install
 #### :warning: Leia isso antes de prosseguir! Todas as etapas a seguir foram realizadas no Android via emulação USB. Não consegui testar no IOS porém é muito provável que funcione já que não existe nenhuma funcionalidade diferenciada por plataforma dentro da aplicação. 
 #### Recomendo que acessem a documentação da Rocketseat sobre configuração de ambientes para React Native <a href="https://react-native.rocketseat.dev/">Clicando Aqui</a>.
 
-Atualize as bibliotecas no celular:
+3. Execute o seguinte comando para o bundle do dispositivo Android:
+```console
+user@server:~/mobile$ react-native bundle --platform android --dev false --entry-file index.js --bundle-output android/app/src/main/assets/index.android.bundle --assets-dest android/app/src/main/res/
+```
+
+4. Alguma dependências precisam do vinculo através do comando abaixo:
+```console
+user@server:~/mobile$ react-native link
+```
+
+5. Atualize as bibliotecas do projeto no dispositivo Android:
 ```console
 user@server:~/mobile$ react-native run-android
 ```
 
-Libere a proxy reverso no celular para as porta 8081 (Metro), 4444 (Back-end) e 9090 (Reactotron):
+6. Libere a proxy reverso no celular para as porta 8081 (Metro), 4444 (Back-end) e 9090 (Reactotron):
 ```console
 user@server:~/mobile$ adb reverse tcp:8081 tcp:8081 && adb reverse tcp:4444 tcp:4444 && adb reverse tcp:9090 tcp:9090
 ```
 
-Inicie a execução do projeto no celular:
+7. Inicie a execução do projeto no celular:
 ```console
 user@server:~/mobile$ react-native start
 ```
