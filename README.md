@@ -3,7 +3,7 @@
 </h1>
 
 <h2 align="center">
-  :dash:&nbsp;FastFeet, desafio final GoStack 10 Rocketseat.&nbsp;:truck:
+  :truck:&nbsp;FastFeet, desafio final GoStack 10 Rocketseat.&nbsp;:dash:
 </h2>
 
 <p align="center">
