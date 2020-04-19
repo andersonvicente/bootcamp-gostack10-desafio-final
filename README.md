@@ -25,9 +25,9 @@ user@server:~/home$ git clone https://github.com/andersonvicente/bootcamp-gostac
 
 ## :wrench: Ferramentas e configurações
 
-Instale o Docker :whale2: disponível em <a href="https://www.docker.com/">https://www.docker.com/</a>
+Instale o Docker :whale2: disponível em <a href="https://www.docker.com/">https://www.docker.com/</a> e inicie um container do postgres, outro do mongodb e outro por o redis.
 
-Instale o Reactotron :collision: disponível em <a href="https://infinite.red/reactotron">https://infinite.red/reactotron</a>
+Instale o Reactotron :collision: disponível em <a href="https://infinite.red/reactotron">https://infinite.red/reactotron</a>. Inicie o Reactotron antes de iniciar o projeto Front-end ou Mobile. O Reactotron inicia através da porta 9090.
 
 ## :gear: Back-end
 
@@ -46,19 +46,24 @@ Crie um novo arquivo .env baseado no env.example existente na pasta e preencha a
 user@server:~/backend$ cp .env.example .env
 ```
 
-Compile o projeto:
+Inicie a execução do projeto (por padrão iniciará utilizando a porta 4444):
+```console
+user@server:~/backend$ yarn dev
+Listening on port 4444
+```
+OU
 ```console
 user@server:~/backend$ yarn build
 ```
-
-Inicie a execução do projeto (por padrão iniciará utilizando a porta 4444):
 ```console
 user@server:~/backend$ yarn start
 Listening on port 4444
 ```
 
-Em outro console, executar o seguinte comando para ativar a fila de envio de e-mail:
-yarn queue
+Abra outro console e execute o seguinte comando para ativar a fila de envio de e-mail:
+```console
+user@server:~/backend$ yarn queue
+```
 
 ## :computer: Front-end
 
