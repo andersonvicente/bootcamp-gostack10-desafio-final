@@ -18,21 +18,37 @@
 
 O FastFeet é uma aplicação de entrega de encomendas. Utiliza Node.js e Express no Back-end, React JS no Front-end Web e React Native para o App Mobile.
 
+```console
+user@server:~/home$ git clone https://github.com/andersonvicente/bootcamp-gostack10-desafio-final.git fastfeet
+```
+
 ## :arrows_counterclockwise: Back-end
 
-a partir do diretório root do fastfeet
+A partir do diretório root do projeto fastfeet entre na pasta pasta backend:
+```console
+user@server:~/fastfeet$ cd ./backend
+```
 
-cd ./backend
+Instale os pacotes do projeto com NPM ou Yarn (Exemplo abaixo):
+```console
+user@server:~/backend$ yarn install
+```
 
-yarn install
+Crie um novo arquivo .env baseado no env.example existente na pasta e preencha as variáveis com as suas configurações:
+```console
+user@server:~/backend$ cp .env.example .env
+```
 
-cp .env.example .env
+Compile o projeto:
+```console
+user@server:~/backend$ yarn build
+```
 
-Preencha as configurações do .env
-
-yarn build
-
-yarn start
+Inicie a execução do projeto (por padrão iniciará utilizando a porta 4444):
+```console
+user@server:~/backend$ yarn start
+Listening on port 4444
+```
 
 Em outro console, executar o seguinte comando para ativar a fila de envio de e-mail:
 yarn queue
