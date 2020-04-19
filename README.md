@@ -83,6 +83,8 @@ Instale os pacotes do projeto com NPM ou Yarn:
 user@server:~/mobile$ yarn install
 ```
 
+#### Atenção! Todos os testes abaixo foram realizados no Android via emulação USB. Não consegui testar no IOS porém é muito provável que funcione já que não existe refência de plataforma específica dentro do código fonte. 
+
 Atualize as bibliotecas no celular:
 ```console
 user@server:~/mobile$ react-native run-android
