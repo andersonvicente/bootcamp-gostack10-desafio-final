@@ -27,17 +27,18 @@ user@server:~/home$ git clone https://github.com/andersonvicente/bootcamp-gostac
 ## :wrench: Ferramentas
 
 Instale o Docker :whale2: disponível em <a href="https://www.docker.com/">https://www.docker.com/</a>.
+
 :elephant: Inicie um container do Postgres, exemplo:
 ```console
-user@server:~/fastfeet$ docker run --name fastfeetdb -e POSTGRES_PASSWORD=docker -p 5432:5432 -d postgres
+user@server:~/fastfeet$ docker run --name postgresfastfeet -e POSTGRES_PASSWORD=docker -p 5432:5432 -d postgres
 ```
 :leaves: Inicie um container do Mongodb, exemplo:
 ```console
-user@server:~/fastfeet$ docker run --name mongodb -p 27017:27017 -d mongo
+user@server:~/fastfeet$ docker run --name mongofastfeet -p 27017:27017 -d mongo
 ```
 :rotating_light: Inicie um container do redis, exemplo:
 ```console
-user@server:~/fastfeet$ docker run --name redisbarber -p 6379:6379 -d -t redis:alpine
+user@server:~/fastfeet$ docker run --name redisfastfeet -p 6379:6379 -d -t redis:alpine
 ```
 
 Acesse o container do Postgres e crie um novo banco de dados, por exemplo, fastfeetdb.
