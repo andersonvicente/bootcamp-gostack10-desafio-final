@@ -31,7 +31,7 @@ Acesse o container do Postgres e crie um novo banco de dados, por exemplo, fastf
 
 Instale o Reactotron :collision: disponível em <a href="https://infinite.red/reactotron">https://infinite.red/reactotron</a>. Inicie o Reactotron antes de iniciar o projeto Front-end ou Mobile. O Reactotron inicia através da porta 9090.
 
-Você pode criar uma conta em <a href="https://mailtrap.io/">https://mailtrap.io/</a> para as variáveis de envio de e-mail :email: (Mas também pode configurar uma conta pessoal sua do seu provedor de e-mail).
+Você pode criar uma conta em <a href="https://mailtrap.io/">https://mailtrap.io/</a> para configurar as variáveis de envio de e-mail do projeto Back-end :email: (Mas também pode configurar os dados de e-mail do seu provedor de e-mail).
 
 ## :gear: Back-end
 
@@ -45,7 +45,7 @@ Instale os pacotes do projeto com NPM ou Yarn:
 user@server:~/backend$ yarn install
 ```
 
-Crie um novo arquivo .env baseado no env.example existente na pasta e preencha as variáveis com as suas configurações dos containers do Docker, banco de dados e conta de e-mail:
+Crie um novo arquivo .env baseado no .env.example existente na pasta e preencha as variáveis com as suas configurações dos containers do Docker, banco de dados e conta de e-mail:
 ```console
 user@server:~/backend$ cp .env.example .env
 ```
