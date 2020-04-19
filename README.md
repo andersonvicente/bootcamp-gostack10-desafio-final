@@ -19,6 +19,7 @@
 
 O FastFeet é uma aplicação de entrega de encomendas. Utiliza Node.js e Express no Back-end, React JS no Front-end Web e React Native para o App Mobile.
 
+Clone este repositório para uma pasta conforme exemplo abaixo:
 ```console
 user@server:~/home$ git clone https://github.com/andersonvicente/bootcamp-gostack10-desafio-final.git fastfeet
 ```
