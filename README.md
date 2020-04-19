@@ -3,7 +3,7 @@
 </h1>
 
 <h2 align="center">
-  :truck:&nbsp;FastFeet, desafio final GoStack 10 Rocketseat.&nbsp;:truck:
+  :dash:&nbsp;FastFeet, desafio final GoStack 10 Rocketseat.&nbsp;:truck:
 </h2>
 
 <p align="center">
@@ -23,9 +23,11 @@ O FastFeet é uma aplicação de entrega de encomendas. Utiliza Node.js e Expres
 user@server:~/home$ git clone https://github.com/andersonvicente/bootcamp-gostack10-desafio-final.git fastfeet
 ```
 
-## :wrench: Configurações
+## :wrench: Ferramentas e configurações
 
-Teste
+Instale o Docker :whale2: disponível em <a href="https://www.docker.com/">https://www.docker.com/</a>
+
+Instale o Reactotron :collision: disponível em <a href="https://infinite.red/reactotron">https://infinite.red/reactotron</a>
 
 ## :gear: Back-end
 
