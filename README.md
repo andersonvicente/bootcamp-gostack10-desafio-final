@@ -8,7 +8,8 @@
 
 <p align="center">
   <a href="#articulated_lorry-sobre-a-aplicação-fastfeet">Sobre a aplicação</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="#arrows_counterclockwise-back-end">Back-end</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#wrench-configurações">Configurações</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#gear-back-end">Back-end</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#computer-front-end">Front-end</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#iphone-mobile">Mobile</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#memo-licença">Licença</a>
@@ -22,7 +23,11 @@ O FastFeet é uma aplicação de entrega de encomendas. Utiliza Node.js e Expres
 user@server:~/home$ git clone https://github.com/andersonvicente/bootcamp-gostack10-desafio-final.git fastfeet
 ```
 
-## :arrows_counterclockwise: Back-end
+## :wrench: Configurações
+
+Teste
+
+## :gear: Back-end
 
 A partir do diretório root do projeto fastfeet entre na pasta pasta backend:
 ```console
