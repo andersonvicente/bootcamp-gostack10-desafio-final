@@ -29,7 +29,7 @@ A partir do diretório root do projeto fastfeet entre na pasta pasta backend:
 user@server:~/fastfeet$ cd ./backend
 ```
 
-Instale os pacotes do projeto com NPM ou Yarn (Exemplo abaixo):
+Instale os pacotes do projeto com NPM ou Yarn:
 ```console
 user@server:~/backend$ yarn install
 ```
@@ -55,27 +55,48 @@ yarn queue
 
 ## :computer: Front-end
 
-a partir do diretório root do fastfeet
+A partir do diretório root do projeto fastfeet entre na pasta pasta frontend:
+```console
+user@server:~/fastfeet$ cd ./frontend
+```
 
-cd ./frontend
+Instale os pacotes do projeto com NPM ou Yarn:
+```console
+user@server:~/frontend$ yarn install
+```
 
-yarn install
-
-yarn start
+Inicie a execução do projeto (por padrão iniciará utilizando a porta 3000):
+```console
+user@server:~/frontend$ yarn start
+Listening on port 3000
+```
 
 ## :iphone: Mobile
 
-a partir do diretório root do fastfeet
+A partir do diretório root do projeto fastfeet entre na pasta pasta mobile:
+```console
+user@server:~/fastfeet$ cd ./mobile
+```
 
-cd ./mobile
+Instale os pacotes do projeto com NPM ou Yarn:
+```console
+user@server:~/mobile$ yarn install
+```
 
-yarn install
+Atualize as bibliotecas no celular:
+```console
+user@server:~/mobile$ react-native run-android
+```
 
-react-native run-android
+Libere a proxy reverso no celular para as porta 8081 (Metro), 4444 (Back-end) e 9090 (Reactotron):
+```console
+user@server:~/mobile$ adb reverse tcp:8081 tcp:8081 && adb reverse tcp:4444 tcp:4444 && adb reverse tcp:9090 tcp:9090
+```
 
-adb reverse tcp:8081 tcp:8081 && adb reverse tcp:4444 tcp:4444 && adb reverse tcp:9090 tcp:9090
-
-react-native start
+Inicie a execução do projeto no celular:
+```console
+user@server:~/mobile$ react-native start
+```
 
 ## :memo: Licença
 
