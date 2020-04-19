@@ -25,7 +25,7 @@ user@server:~/home$ git clone https://github.com/andersonvicente/bootcamp-gostac
 
 ## :wrench: Ferramentas e configurações
 
-Instale o Docker :whale2: disponível em <a href="https://www.docker.com/">https://www.docker.com/</a> e inicie um container do postgres, outro do mongodb e outro por o redis.
+Instale o Docker :whale2: disponível em <a href="https://www.docker.com/">https://www.docker.com/</a> e inicie um container do Postgres :elephant:, outro do Mongodb :leaves: e outro para o redis (Alpine) :rotating_light:.
 
 Instale o Reactotron :collision: disponível em <a href="https://infinite.red/reactotron">https://infinite.red/reactotron</a>. Inicie o Reactotron antes de iniciar o projeto Front-end ou Mobile. O Reactotron inicia através da porta 9090.
 
