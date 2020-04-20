@@ -30,6 +30,7 @@ module.exports = {
     'prettier'
   ],
   rules: {
+    'no-alert': 'off',
     'prettier/prettier': 'error',
     'react/jsx-filename-extension': ['error', { extensions: ['.js', '.jsx'] }],
     'import/prefer-default-export': 'off',
@@ -43,7 +44,8 @@ module.exports = {
     'no-console': ['error', { allow: ['tron'] }],
     'react-hooks/rules-of-hooks': 'error',
     'react-hooks/exhaustive-deps': 'warn',
-    'react/jsx-props-no-spreading': 'off'
+    'react/jsx-props-no-spreading': 'off',
+    'react/forbid-prop-types': 'off'
   },
   settings: {
     "import/resolver": {

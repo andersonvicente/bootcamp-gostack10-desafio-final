@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import PropTypes from 'prop-types';
 
 import { Container, Point, Text } from './styles';
 
@@ -38,3 +39,7 @@ export default function Status({ delivery }) {
     </Container>
   );
 }
+
+Status.propTypes = {
+  delivery: PropTypes.object.isRequired,
+};

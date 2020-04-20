@@ -126,7 +126,9 @@ export default function Delivery() {
           </Item>
           <Item width="20%">{delivery.recipient.name}</Item>
           <Item width="20%">
-            <Avatar src={delivery.deliveryman.avatar.url} />
+            <Avatar src={delivery.deliveryman.avatar
+                  ? delivery.deliveryman.avatar.url
+                  : `https://api.adorable.io/avatars/40/${delivery.deliveryman.name}.png`} />
             {delivery.deliveryman.name}
           </Item>
           <Item width="15%">{delivery.recipient.city}</Item>
@@ -141,17 +143,29 @@ export default function Delivery() {
               onClick={() => handleActionsVisible(delivery.id)}
             />
             <ListActions visible={visible === delivery.id}>
-              <li onClick={() => handleModalShowContent(delivery)}>
-                <MdRemoveRedEye size={15} color="#8E5BE8" />
-                <p>Visualizar</p>
+              <li>
+                <button
+                  type="button"
+                  onClick={() => handleModalShowContent(delivery)}
+                >
+                  <MdRemoveRedEye size={15} color="#8E5BE8" />
+                  <p>Visualizar</p>
+                </button>
               </li>
-              <li onClick={() => handleNavigateEdit(delivery)}>
-                <MdModeEdit size={15} color="#4D85EE" />
-                <p>Editar</p>
+              <li>
+                <button
+                  type="button"
+                  onClick={() => handleNavigateEdit(delivery)}
+                >
+                  <MdModeEdit size={15} color="#4D85EE" />
+                  <p>Editar</p>
+                </button>
               </li>
-              <li onClick={() => handleRemove(delivery.id)}>
-                <MdDeleteForever size={15} color="#DE3B3B" />
-                <p>Excluir</p>
+              <li>
+                <button type="button" onClick={() => handleRemove(delivery.id)}>
+                  <MdDeleteForever size={15} color="#DE3B3B" />
+                  <p>Excluir</p>
+                </button>
               </li>
             </ListActions>
           </Item>

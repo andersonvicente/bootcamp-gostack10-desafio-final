@@ -123,13 +123,23 @@ export default function Deliveryman() {
               onClick={() => handleActionsVisible(deliveryman.id)}
             />
             <ListActions visible={visible === deliveryman.id}>
-              <li onClick={() => handleNavigateEdit(deliveryman)}>
-                <MdModeEdit size={15} color="#4D85EE" />
-                <p>Editar</p>
+              <li>
+                <button
+                  type="button"
+                  onClick={() => handleNavigateEdit(deliveryman)}
+                >
+                  <MdModeEdit size={15} color="#4D85EE" />
+                  <p>Editar</p>
+                </button>
               </li>
-              <li onClick={() => handleRemove(deliveryman.id)}>
-                <MdDeleteForever size={15} color="#DE3B3B" />
-                <p>Excluir</p>
+              <li>
+                <button
+                  type="button"
+                  onClick={() => handleRemove(deliveryman.id)}
+                >
+                  <MdDeleteForever size={15} color="#DE3B3B" />
+                  <p>Excluir</p>
+                </button>
               </li>
             </ListActions>
           </Item>

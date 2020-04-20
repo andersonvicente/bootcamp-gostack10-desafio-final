@@ -85,13 +85,23 @@ export default function Problem() {
               onClick={() => handleActionsVisible(problem.id)}
             />
             <ListActions visible={visible === problem.id}>
-              <li onClick={() => handleModalShowContent(problem)}>
-                <MdRemoveRedEye size={15} color="#8E5BE8" />
-                <p>Visualizar</p>
+              <li>
+                <button
+                  type="button"
+                  onClick={() => handleModalShowContent(problem)}
+                >
+                  <MdRemoveRedEye size={15} color="#8E5BE8" />
+                  <p>Visualizar</p>
+                </button>
               </li>
-              <li onClick={() => handleCancelDelivery(problem.id)}>
-                <MdDeleteForever size={15} color="#DE3B3B" />
-                <p>Cancelar encomenda</p>
+              <li>
+                <button
+                  type="button"
+                  onClick={() => handleCancelDelivery(problem.id)}
+                >
+                  <MdDeleteForever size={15} color="#DE3B3B" />
+                  <p>Cancelar encomenda</p>
+                </button>
               </li>
             </ListActions>
           </Item>

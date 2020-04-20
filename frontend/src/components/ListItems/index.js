@@ -151,19 +151,31 @@ export const ListActions = styled.ul`
 
   li {
     display: flex;
-    flex-direction: initial;
-    padding: 10px 10px 10px 10px;
+    border: 0;
     border-bottom: 1px solid #eee;
-    cursor: pointer;
 
-    &:hover {
-      background: ${darken(0.05, '#fff')};
-    }
+    button {
+      display: flex;
+      flex-direction: initial;
+      padding: 10px 10px 10px 10px;
+      border: none;
+      cursor: pointer;
+      background: transparent;
+      width: 100%;
 
-    p {
-      margin-left: 5px;
-      font: 16px 'Roboto', sans-serif;
-      color: #999;
+      &:hover {
+        background: ${darken(0.05, '#fff')};
+      }
+
+      svg {
+        margin-top: 5px;
+      }
+
+      p {
+        margin-left: 5px;
+        font: 16px 'Roboto', sans-serif;
+        color: #999;
+      }
     }
   }
 

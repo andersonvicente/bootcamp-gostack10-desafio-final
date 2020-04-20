@@ -3,6 +3,7 @@ import { useDispatch } from 'react-redux';
 import { MdChevronLeft, MdCheck } from 'react-icons/md';
 
 import { Form } from '@rocketseat/unform';
+import PropTypes from 'prop-types';
 import { Back, Button } from '~/styles/form';
 import history from '~/services/history';
 
@@ -22,7 +23,7 @@ import {
   InputZipCode,
 } from './styles';
 
-export default function Create({ data }) {
+export default function RecipientForm({ data }) {
   const recipient = data
     ? data.recipient
     : {
@@ -43,7 +44,7 @@ export default function Create({ data }) {
     history.goBack();
   }
 
-  function HandleSubmit(data) {
+  function HandleSubmit(dataForm) {
     const {
       name,
       address_street,
@@ -52,7 +53,7 @@ export default function Create({ data }) {
       city,
       state,
       zip_code,
-    } = data;
+    } = dataForm;
 
     if (recipient.id) {
       dispatch(
@@ -146,3 +147,7 @@ export default function Create({ data }) {
     </Container>
   );
 }
+
+RecipientForm.propTypes = {
+  data: PropTypes.object,
+};

@@ -1,5 +1,6 @@
 import React, { useMemo } from 'react';
 import { format, parseISO } from 'date-fns';
+import PropTypes from 'prop-types';
 import { Content } from './styles';
 
 export default function Modal({ showModal, delivery, handleModalClose }) {
@@ -47,3 +48,9 @@ export default function Modal({ showModal, delivery, handleModalClose }) {
     </Content>
   );
 }
+
+Modal.propTypes = {
+  showModal: PropTypes.bool.isRequired,
+  delivery: PropTypes.object,
+  handleModalClose: PropTypes.func.isRequired,
+};

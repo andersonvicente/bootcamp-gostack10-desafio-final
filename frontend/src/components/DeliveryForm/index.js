@@ -4,6 +4,7 @@ import { MdChevronLeft, MdCheck } from 'react-icons/md';
 import Select from 'react-select';
 
 import { Form, Input } from '@rocketseat/unform';
+import PropTypes from 'prop-types';
 import { Back, Button } from '~/styles/form';
 import history from '~/services/history';
 import api from '~/services/api';
@@ -153,3 +154,7 @@ export default function DeliveryForm({ data }) {
     </Container>
   );
 }
+
+DeliveryForm.propTypes = {
+  data: PropTypes.object,
+};

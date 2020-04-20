@@ -3,6 +3,7 @@ import { useDispatch } from 'react-redux';
 import { MdChevronLeft, MdCheck } from 'react-icons/md';
 
 import { Form, Input } from '@rocketseat/unform';
+import PropTypes from 'prop-types';
 import { Back, Button } from '~/styles/form';
 import history from '~/services/history';
 
@@ -15,7 +16,7 @@ import AvatarInput from './AvatarInput';
 
 import { Container } from './styles';
 
-export default function Create({ data }) {
+export default function DeliverymanForm({ data }) {
   const deliveryman = data
     ? data.deliveryman
     : { id: null, avatar_id: null, name: '', email: '' };
@@ -26,22 +27,22 @@ export default function Create({ data }) {
     history.goBack();
   }
 
-  function HandleSubmit(data) {
+  function HandleSubmit({ avatar_id, name, email }) {
     if (deliveryman.id) {
       dispatch(
         updateRequest({
           id: deliveryman.id,
-          avatar_id: data.avatar_id,
-          name: data.name,
-          email: data.email,
+          avatar_id,
+          name,
+          email,
         })
       );
     } else {
       dispatch(
         createRequest({
-          avatar_id: data.avatar_id,
-          name: data.name,
-          email: data.email,
+          avatar_id,
+          name,
+          email,
         })
       );
     }
@@ -84,3 +85,7 @@ export default function Create({ data }) {
     </Container>
   );
 }
+
+DeliverymanForm.propTypes = {
+  data: PropTypes.object,
+};

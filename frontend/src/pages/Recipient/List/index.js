@@ -103,7 +103,7 @@ export default function Recipient() {
             {`#${recipient.id}`}
           </Item>
           <Item width="30%">{recipient.name}</Item>
-          <Item width="50%">{`${recipient.address_street}, ${recipient.address_number} - ${recipient.address_complement}, ${recipient.city} - ${recipient.state}`}</Item>
+          <Item width="50%">{`${recipient.address_street}, ${recipient.address_number}${recipient.address_complement ? ' - ' + recipient.address_complement : ''} - ${recipient.city} - ${recipient.state}`}</Item>
           <Item width="10%" center>
             <ButtonActions
               size={25}
@@ -111,13 +111,23 @@ export default function Recipient() {
               onClick={() => handleActionsVisible(recipient.id)}
             />
             <ListActions visible={visible === recipient.id}>
-              <li onClick={() => handleNavigateEdit(recipient)}>
-                <MdModeEdit size={15} color="#4D85EE" />
-                <p>Editar</p>
+              <li>
+                <button
+                  type="button"
+                  onClick={() => handleNavigateEdit(recipient)}
+                >
+                  <MdModeEdit size={15} color="#4D85EE" />
+                  <p>Editar</p>
+                </button>
               </li>
-              <li onClick={() => handleRemove(recipient.id)}>
-                <MdDeleteForever size={15} color="#DE3B3B" />
-                <p>Excluir</p>
+              <li>
+                <button
+                  type="button"
+                  onClick={() => handleRemove(recipient.id)}
+                >
+                  <MdDeleteForever size={15} color="#DE3B3B" />
+                  <p>Excluir</p>
+                </button>
               </li>
             </ListActions>
           </Item>
