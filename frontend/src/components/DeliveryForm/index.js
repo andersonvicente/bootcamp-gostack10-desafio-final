@@ -158,3 +158,7 @@ export default function DeliveryForm({ data }) {
 DeliveryForm.propTypes = {
   data: PropTypes.object,
 };
+
+DeliveryForm.defaultProps = {
+  data: null,
+};

@@ -54,3 +54,7 @@ Modal.propTypes = {
   delivery: PropTypes.object,
   handleModalClose: PropTypes.func.isRequired,
 };
+
+Modal.defaultProps = {
+  delivery: null,
+};

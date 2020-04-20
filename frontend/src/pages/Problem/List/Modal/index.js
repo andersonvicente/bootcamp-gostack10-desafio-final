@@ -18,3 +18,7 @@ Modal.propTypes = {
   problem: PropTypes.object,
   handleModalClose: PropTypes.func.isRequired,
 };
+
+Modal.defaultProps = {
+  problem: null,
+};

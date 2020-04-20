@@ -151,3 +151,7 @@ export default function RecipientForm({ data }) {
 RecipientForm.propTypes = {
   data: PropTypes.object,
 };
+
+RecipientForm.defaultProps = {
+  data: null,
+};

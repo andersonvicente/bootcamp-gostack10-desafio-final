@@ -6,8 +6,6 @@ import PropTypes from 'prop-types';
 
 import Logosvg from '~/assets/logo.svg';
 
-import Cpf from '~/components/Cpf';
-
 import { signInRequest } from '~/store/modules/auth/actions';
 
 import { Background, Container, Form, FormInput, SubmitButton } from './styles';

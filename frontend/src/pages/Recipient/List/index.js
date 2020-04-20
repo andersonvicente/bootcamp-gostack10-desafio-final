@@ -103,7 +103,13 @@ export default function Recipient() {
             {`#${recipient.id}`}
           </Item>
           <Item width="30%">{recipient.name}</Item>
-          <Item width="50%">{`${recipient.address_street}, ${recipient.address_number}${recipient.address_complement ? ' - ' + recipient.address_complement : ''} - ${recipient.city} - ${recipient.state}`}</Item>
+          <Item width="50%">{`${recipient.address_street}, ${
+            recipient.address_number
+          }${
+            recipient.address_complement
+              ? ` - ${recipient.address_complement}`
+              : ''
+          } - ${recipient.city} - ${recipient.state}`}</Item>
           <Item width="10%" center>
             <ButtonActions
               size={25}

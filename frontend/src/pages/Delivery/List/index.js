@@ -126,9 +126,13 @@ export default function Delivery() {
           </Item>
           <Item width="20%">{delivery.recipient.name}</Item>
           <Item width="20%">
-            <Avatar src={delivery.deliveryman.avatar
+            <Avatar
+              src={
+                delivery.deliveryman.avatar
                   ? delivery.deliveryman.avatar.url
-                  : `https://api.adorable.io/avatars/40/${delivery.deliveryman.name}.png`} />
+                  : `https://api.adorable.io/avatars/40/${delivery.deliveryman.name}.png`
+              }
+            />
             {delivery.deliveryman.name}
           </Item>
           <Item width="15%">{delivery.recipient.city}</Item>
